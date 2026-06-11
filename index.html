@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>GISA Dan | PortFolio</title>
+    <meta name="description" content="Interactive Website/Portfolio to showcase my work">
+    <link rel='stylesheet' href='index.css'>
+</head>
+<body>
+    <!--Custom Cursor Elements-->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-glow"></div>
+
+    <!--Particle Background-->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!--Navigation Bar-->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <div class="logo-icon">G</div>
+                <span class="scramble-text">Dan.Tech</span>
+            </a>
+
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <!--Theme Switcher-->
+                <div class="theme-switcher">    
+                    <button class="theme-btn active" data-theme="cyan" style="background: #00f2fe; box-shadow: 0 0 10px #00f2fe;" aria-label="cyan theme"></button>
+                    <button class="theme-btn active" data-theme="Plasma" style="background: #ff007f; box-shadow: 0 0 10px #ff007f;" aria-label="Plasma theme"></button>
+                    <button class="theme-btn active" data-theme="emerald" style="background: #00ff66; box-shadow: 0 0 10px #00f2fe;" aria-label="Emerald theme"></button>
+                </div>
+                <!--Audio Toggle Switch-->
+                <button class="sound-toggle" aria label="Toggle Sound">
+                    <span class="sound-icon">🔈</span>
+                    <span class="sound-text">SOUND: OFF</span>
+                </button>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#skills" class="active">Skills</a></li>
+                <li><a href="#experience" class="active">Experience</a></li>
+                <li><a href="#projects" class="active">Projects</a></li>
+                <li><a href="#contact" class="active">Contact</a></li>
+                <li><a href="#contact" class="btn btn-secondary btn-nav-hire" style="padding: 0.4rem 0.8rem; margin-left: 0.5rem; font-size: 0.85rem;">Hire</a></li>
+            </ul>
+        </div>
+
+        <!--Main Content Area-->
+        <main>
+            <!--Hero Section-->
+            <section id="home" class="hero">
+                    <div class="container hero-content">
+                        <div class="hero-badge reveal">
+                            <span class="hero-status-pulse"></span>
+                            Available for Consultations & Contracts
+                        </div>
+                        <h1 class="hero-title reveal reveal-delay-1">
+                            Building Resilient <span class="gradient-text scramble-text">Network Solutions</span> & Systems
+                        </h1>
+
+                        <div class="hero-types reveal reveal-delay-2" data-words='["Network Systems Architect", "Systems Security Engineer","Automation Developer", "Digital Responsibility Advisor"]'></div>
+
+                        <p class="hero-desc reveal reveal-delay-3">
+                            Hi, I'm<strong> Dan Gisa</strong>. I engineer secure, high-performance network infrastructures, build custom automation software, anf guide corporate digital policy for responsible, ethical technology growth.
+                        </p>
+                        
+                        <div class="hero-actions reveal reveal-delay-3">
+                            <a href="#projects" class="btn btn-primary">
+                                Explore Projects
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="scroll-indicator reveal">
+                        <span>Scroll to Explore</span>
+                        <div class="scroll-mouse">
+                            <div class="scroll-wheel"></div>
+                        </div>
+                    </a>
+            </section>
+
+            <!--About Section-->
+            <section id="about">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="section-tag">Biography</span>
+                        <h2 class="section-title scramble-text">Architecting Secure Connections</h2>
+                        <p class="section-subtitle">A blend of systems engineering, digital governance, and custom development.</p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="about-text reveal">
+                            <p>
+                                I am an IT Systems and Network Engineer with a passionate focus on network integrity, cybersecurity auditing, and automated scripting. I specialize in scaling enterprise networking topologies while maintaining strict security configurations.
+                            </p>
+                            <p>
+                                Beyond technical execution, my work centers heavily on <strong>Digital Responsibility</strong>—ensuring that data systems are not only robust and fast but also secure, ethical, GDPR-compliant, and built sustainably.
+                            </p>
+
+                            <div class="about-details">
+                                <div class="detail-item">
+                                    <div class="detail-num gradient-text">5+</div>
+                                    <div class="detail-label">Years of experience</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-num gradient-text">40+</div>
+                                    <div class="detail-label">Networks Audited</div>
+                                </div>
+                                 <div class="detail-item">
+                                    <div class="detail-num gradient-text">20+</div>
+                                    <div class="detail-label">Tools Developed</div>
+                                </div>
+                                 <div class="detail-item">
+                                    <div class="detail-num gradient-text">99.9%</div>
+                                    <div class="detail-label">Uptime Maintained</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pillars-grid reveal reveal-delay-2">
+                            <!--Pillar 1-->
+                            <div class="pillar-card glass-panel">
+                                <div class="pillar-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><circle cx="12" cy="20" r="1"></circle></svg>
+                                </div>
+                                <div class="pillar-info">
+                                    <h3>Network Arhitecture</h3>
+                                    <p>Designing redundant routing topologies, subnets, VPN connections, and load balancing mechanisms.</p>
+                                </div>
+                            </div>
+                            <!--Pillar 2-->
+                            <div class="pillar-card glass-panel">
+                                <div class="pillar-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                </div>
+                                <div class="pillar-info">
+                                    <h3>Security Hardening</h3>
+                                    <p>Implementing active intrusion detection, access controls, firewalls, and cryptographic protocols.</p>
+                                </div>
+                            </div>
+
+                            <!--Pillar 3-->
+                            <div class="pillar-card glass-panel">
+                                <div class="pillar-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                </div>
+                                <div class="pillar-info">
+                                    <h3>Digital Responsibility</h3>
+                                    <p>Establishing digital privacy safeguards, ethical handling guidelines, and compliance audits.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Skills Section-->
+            <section id="skills" style="background: rgba(3, 4, 6, 0.45);">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="section-tag">Expertise</span>
+                        <h2 class="sectin-title scramble-text">Technical Skillset</h2>
+                        <p class="section-subtitle">Proficiencies that translate complex network theory into robust operational assets.</p>
+                    </div>
+
+                    <div class="skills-grid reveal">
+                        <!--Column 1-->
+                        <div class="skills-column">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2.5"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                                Infrastructure & Defense
+                            </h3>
+                            <div class="skills-list">
+                                <div class="skill-item" data-skill="routing">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Routing & Switching (OSPF, BGP, VLANs)</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="security">
+                                    <div class="skill info">
+                                        <span class="skill-name">Firewalls & Intrusion Detection (IDS/IPS)</span>
+                                        <span class="skill-percent">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-skill="cloud">
+                                    <div class="skill-info">
+                                        <span class="skill-name">VPC & Cloud Networking (AWS/Azure)</span>
+                                        <span class="skill-precent">80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="80">
+                                        </div>
+                                    </div>
+                                    <div class="skill-item" data-skill="packets">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Packet Analysis & Troubleshooting (Wireshark)</span>
+                                            <span class="skill-precent">95%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="95"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Column 2-->
+                        <div class="skill-column">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                DevOps & Automation
+                            </h3>
+                                <div class="skills-list">
+                                    <div class="skill-item" data-skill="python">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Python Scripting & Network Automation</span>
+                                            <span class="skill-percent">85%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-progress="85"></div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="skill-item" data-skill="cli">
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </header>
+</body>
+</html>
